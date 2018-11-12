@@ -1,10 +1,13 @@
 // @flow
-import React from 'react'
-import { Text, SafeAreaView, StyleSheet } from 'react-native'
+import React from "react"
+import { SafeAreaView, StyleSheet } from "react-native"
+
+// data
+import data from "../../assets/data/data"
 
 // components
-import { RoundedButton } from '../components'
-import { Colors } from '../themes'
+import { BreweryList, Title } from "../components"
+import { Colors } from "../themes"
 
 const styles = StyleSheet.create({
   container: {
@@ -17,8 +20,8 @@ export default class RootContainer extends React.PureComponent<null> {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Text>Text!</Text>
-        <RoundedButton onPress={() => null}>Button text</RoundedButton>
+        <Title>Brewerynator</Title>
+        <BreweryList data={data.breweries}/>
       </SafeAreaView>
     )
   }
