@@ -21,7 +21,7 @@ export default class RootContainer extends React.PureComponent<null> {
     return (
       <SafeAreaView style={styles.container}>
         <Title>Brewerynator</Title>
-        <BreweryList data={data.breweries}/>
+        <BreweryList data={data.breweries} />
       </SafeAreaView>
     )
   }

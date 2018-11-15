@@ -9,10 +9,7 @@ export default class BreweryList extends React.PureComponent<Props> {
   render() {
     const { data } = this.props
     return (
-      <FlatList
-        data={data}
-        renderItem={({ item }) => <Brewery {...item}/>}
-      />
+      <FlatList data={data} renderItem={({ item }) => <Brewery {...item} />} />
     )
   }
 }

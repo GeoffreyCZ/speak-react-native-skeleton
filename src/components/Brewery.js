@@ -43,35 +43,28 @@ type Props = {|
 |}
 
 export default class Brewery extends React.PureComponent<Props> {
-
   constructor(props) {
     super(props)
     this.state = {
       starCount: props.rating,
     }
-  };
+  }
 
   onStarRatingPress(rating) {
     this.setState({
       starCount: rating,
     })
-  };
+  }
 
   render() {
     const { imageId, state, name } = this.props
     const { starCount } = this.state
     return (
       <View style={styles.itemContainer}>
-        <Image style={styles.image} source={Images[imageId]}/>
+        <Image style={styles.image} source={Images[imageId]} />
         <View style={styles.textContainer}>
-          <Text
-            style={styles.text}>
-            {name}
-          </Text>
-          <Flag
-            code={state}
-            size={24}
-          />
+          <Text style={styles.text}>{name}</Text>
+          <Flag code={state} size={24} />
         </View>
         <View style={styles.starContainer}>
           <StarRating
@@ -79,7 +72,7 @@ export default class Brewery extends React.PureComponent<Props> {
             disabled={false}
             maxStars={5}
             rating={starCount}
-            selectedStar={(rating) => this.onStarRatingPress(rating)}
+            selectedStar={rating => this.onStarRatingPress(rating)}
           />
         </View>
       </View>
