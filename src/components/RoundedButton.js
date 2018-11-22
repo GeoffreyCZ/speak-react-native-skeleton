@@ -1,20 +1,20 @@
 // @flow
-import React from 'react'
-import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+import React from "react"
+import { StyleSheet, Text, TouchableOpacity } from "react-native"
 
 // theme
-import { Colors, Metrics } from '../themes'
+import { Colors, Metrics } from "../themes"
 
 const styles = StyleSheet.create({
   button: {
-    alignItems: 'center',
+    alignItems: "center",
     backgroundColor: Colors.background,
     borderColor: Colors.primary,
-    borderWidth: 2,
+    borderWidth: 1,
     width: Metrics.buttons.height,
     height: Metrics.buttons.height,
     borderRadius: Metrics.buttons.height / 2,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
 })
 

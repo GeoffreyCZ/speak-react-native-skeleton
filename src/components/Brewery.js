@@ -1,6 +1,6 @@
 // @flow
 import React from "react"
-import { StyleSheet, Text, View, Image } from "react-native"
+import { StyleSheet, Text, View, Image, TouchableHighlight } from "react-native"
 import Flag from "react-native-flags"
 import StarRating from "react-native-star-rating"
 
@@ -36,10 +36,12 @@ const styles = StyleSheet.create({
 })
 
 type Props = {|
+  +id: number,
   +state: string,
-  +name: string,
+  +manufacturer: string,
   +imageId: string,
   rating: number,
+  navigation: any,
 |}
 
 export default class Brewery extends React.PureComponent<Props> {
@@ -57,25 +59,34 @@ export default class Brewery extends React.PureComponent<Props> {
   }
 
   render() {
-    const { imageId, state, name } = this.props
+    const { id, imageId, state, manufacturer, navigation } = this.props
     const { starCount } = this.state
     return (
-      <View style={styles.itemContainer}>
-        <Image style={styles.image} source={Images[imageId]} />
-        <View style={styles.textContainer}>
-          <Text style={styles.text}>{name}</Text>
-          <Flag code={state} size={24} />
+      <TouchableHighlight
+        onPress={() =>
+          navigation.navigate("BreweryDetail", {
+            id,
+            imageId,
+          })
+        }
+      >
+        <View style={styles.itemContainer}>
+          <Image style={styles.image} source={Images[imageId]} />
+          <View style={styles.textContainer}>
+            <Text style={styles.text}>{manufacturer}</Text>
+            <Flag code={state} size={24} />
+          </View>
+          <View style={styles.starContainer}>
+            <StarRating
+              starSize={20}
+              disabled={false}
+              maxStars={5}
+              rating={starCount}
+              selectedStar={rating => this.onStarRatingPress(rating)}
+            />
+          </View>
         </View>
-        <View style={styles.starContainer}>
-          <StarRating
-            starSize={20}
-            disabled={false}
-            maxStars={5}
-            rating={starCount}
-            selectedStar={rating => this.onStarRatingPress(rating)}
-          />
-        </View>
-      </View>
+      </TouchableHighlight>
     )
   }
 }
