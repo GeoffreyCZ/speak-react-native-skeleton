@@ -1,0 +1,213 @@
+export default {
+  breweries: [
+    {
+      id: 1,
+      key: "01",
+      name: "Augustiner Pils",
+      state: "DE",
+      manufacturer: "Augustiner-Bräu",
+      rating: 5,
+      imageId: "01",
+      description:
+        "Augustiner-Bräu is a brewery in Munich, Germany. Established in 1328, it is Munich's oldest independent brewery. The company is owned by the Edith Haberland Wagner Trust 51% and the Inselkammer-Family 49%.",
+    },
+    {
+      id: 2,
+      key: "02",
+      name: "Pilsner Urquell",
+      state: "CZ",
+      manufacturer: "Pilsner Urquell Brewery",
+      rating: 5,
+      imageId: "02",
+      description:
+        "Pilsner Urquell (IPA: [ˈpɪlznɐ ˈʔuːɐ̯ˌkvɛl], Czech: Plzeňský prazdroj IPA: [ˈpl̩zɛɲskiː ˈprazdroj]), is a Czech lager brewed by the Pilsner Urquell Brewery in Plzeň (Pilsen), Czech Republic. Pilsner Urquell is the world’s first blond or pale lager, and its popularity meant it was much copied, and many of these copies are named pils, pilsner or pilsener.",
+    },
+    {
+      id: 3,
+      key: "03",
+      name: "Guiness",
+      state: "IE",
+      manufacturer: "St. James's Gate",
+      rating: 4,
+      imageId: "03",
+      description:
+        "St. James's Gate Brewery (Irish: Grúdlann Gheata Naomh Séamuis) is a brewery founded in 1759 in Dublin, Ireland, by Arthur Guinness. The company is now a part of Diageo, a British company formed from the merger of Guinness and Grand Metropolitan in 1997. The main product of the brewery is Guinness Draught.",
+    },
+    {
+      id: 4,
+      key: "04",
+      name: "Brahma",
+      state: "BR",
+      manufacturer: "Anheuser-Busch InBev",
+      rating: 3,
+      imageId: "04",
+      description:
+        "Anheuser-Busch InBev SA/NV (abbreviated as AB InBev) is a multinational drink and brewing holdings company based in Leuven, Belgium. Additional main offices are located in São Paulo, New York City, London, St. Louis, Mexico City, Bremen, Johannesburg and others. The company was enlarged in October 2016 when AB InBev purchased SABMiller and concluded a merger of the two entities. It has been the world's largest brewer even before the acquisition of SABMiller and is considered one of the largest fast-moving consumer goods (FMCG) companies in the world.",
+    },
+    {
+      id: 5,
+      key: "05",
+      name: "Coors Light",
+      state: "CA",
+      manufacturer: "Coors Brewing Company",
+      rating: 3,
+      imageId: "05",
+      description:
+        "The Coors Brewing Company is a regional division of the world's third-largest brewing company, the Molson Coors Brewing Company. Coors operates a brewery in Golden, Colorado, that is the largest single brewery facility in the world.",
+    },
+    {
+      id: 6,
+      key: "06",
+      name: "Tsingtao",
+      state: "CN",
+      manufacturer: "Tsingtao Brewery Co.",
+      rating: 1,
+      imageId: "06",
+      description:
+        "Tsingtao Brewery Co. Ltd. (simplified Chinese: 青岛啤酒厂; traditional Chinese: 青島啤酒廠; pinyin: Qīngdǎo píjiǔchǎng; German: Germania-Brauerei) is China's second largest brewery, with about 15% of domestic market share. It was founded in 1903 by German settlers in Qingdao, Shandong province. Its logo displays an image of Zhan Qiao, a pier on Qingdao's southern shore.",
+    },
+    {
+      id: 7,
+      key: "07",
+      name: "Heineken",
+      state: "NL",
+      manufacturer: "Heineken International",
+      rating: 0,
+      imageId: "07",
+      description:
+        "Heineken N.V. (Dutch pronunciation: [ˈɦɛinəkə(n)]; at times self-styled as HEINEKEN) is a Dutch brewing company, founded in 1864 by Gerard Adriaan Heineken in Amsterdam. As of 2017, Heineken owns over 165 breweries in more than 70 countries. It produces 250 international, regional, local and speciality beers and ciders and employs approximately 73,000 people.",
+    },
+    {
+      id: 8,
+      key: "08",
+      name: "Budweiser",
+      state: "US",
+      manufacturer: "Anheuser-Busch",
+      rating: 0,
+      imageId: "08",
+      description:
+        "Anheuser-Busch Companies, LLC /ˈænhaɪzər ˈbʊʃ/ is an American brewing company headquartered in St. Louis, Missouri. Since 2008, it has been a wholly owned subsidiary of Anheuser-Busch InBev (AB InBev) which also has its North American regional management headquarters in St. Louis.",
+    },
+    {
+      id: 9,
+      key: "09",
+      name: "Baltika",
+      state: "RU",
+      manufacturer: "Baltic Beverages Holding",
+      rating: 1,
+      imageId: "09",
+      description:
+        "Baltic Beverages Holding is a brewing company owned by Carlsberg Group. It is a significant operator in the brewing industry in Russia, Ukraine, the Baltic countries and Kazakhstan, most notably holding a controlling stake in Baltika Breweries. The company markets a range of beer brands from 19 breweries, ten of which are in Russia, four in the Baltic countries, three in Ukraine, one in Kazakhstan and one in Uzbekistan. The company was a 50-50 joint venture between Carlsberg and Scottish & Newcastle prior to Carlsberg's April 2008 acquisition of S&N.",
+    },
+    {
+      id: 10,
+      key: "10",
+      name: "Corona",
+      state: "MX",
+      manufacturer: "Grupo Modelo",
+      rating: 2,
+      imageId: "10",
+      description:
+        "Grupo Modelo is a large brewery in Mexico that exports beer to most countries of the world. Its export brands include Corona, Modelo, and Pacífico. Grupo Modelo also brews brands intended solely for the domestic Mexican market, Estrella (a local beer found only in western Mexico); and León and Montejo (originally local to Yucatán but now available nationwide, and available in the United States since 2014). Grupo Modelo has exclusive rights in Mexico for the import and distribution of beer produced by Anheuser-Busch. Until the 1960s, Grupo Modelo used red poppy flowers in its advertising, where almost any image it used had poppy flowers somewhere in the image.",
+    },
+    {
+      id: 11,
+      key: "11",
+      name: "Ožujsko",
+      state: "HR",
+      manufacturer: "Zagrebačka pivovara",
+      rating: 2,
+      imageId: "11",
+      description:
+        "Zagrebačka pivovara (lit. Zagreb Brewery) was founded when brewers from the Upper Town of Zagreb realized they were not able to produce enough beer for the ever-growing and developing city. The founding assembly of Zagrebačka pivovara as a joint-stock company was held on May 19, 1892, in the premises of the Croatian Discount Bank at the Ban Jelačić Square. The main initiators of the construction of a new facility were count Gustav Pongratz and baron Petar Dragutin Turković. Shortly after the convention, construction in Gornja Ilica began under supervision of Janko Grahor, based on plans made by architect Kuno Waidmann.",
+    },
+    {
+      id: 12,
+      key: "12",
+      name: "Laško",
+      state: "SI",
+      manufacturer: "Laško Brewery",
+      rating: 3,
+      imageId: "12",
+      description:
+        "Laško Brewery (Slovene: Pivovarna Laško) is the largest brewery in Slovenia. It is named after the town of Laško, where it is located. The brewery was founded in 1825 by Franz Geyer, a gingerbread baker and mead producer. After World War II ended in 1945, Laško was the fifth-largest in Yugoslavia, and by 1991 it was the largest among 28 Yugoslav breweries. It lost much of the Yugoslav market in 1991 after Slovenia declared independence and the resulting Ten-Day War, although sales rebounded during the 1990s.",
+    },
+    {
+      id: 13,
+      key: "13",
+      name: "Zlatý Bažant",
+      state: "SK",
+      manufacturer: "Hurbanovo Brewery",
+      rating: 4,
+      imageId: "13",
+      description:
+        "Zlatý Bažant (Golden Pheasant) is the most exported Slovak beer brand. It was founded in 1969[1] and is produced at its brewery in Hurbanovo. It was purchased by the Heineken International group in 1995. It is distributed in the United States and Canada under the name Golden Pheasant.",
+    },
+    {
+      id: 14,
+      key: "14",
+      name: "Sagres",
+      state: "PT",
+      manufacturer: "Sociedade Central de Cervejas",
+      rating: 2,
+      imageId: "14",
+      description:
+        "Sociedade Central de Cervejas (SCC) (full name: SCC – Sociedade Central de Cervejas e Bebidas, S.A.) is a Portuguese brewery, founded in 1934. Its main output is the Sagres brand of beers. The company has been controlled by Heineken since April 2008.",
+    },
+    {
+      id: 15,
+      key: "15",
+      name: "Víking",
+      state: "IS",
+      manufacturer: "Akureyri Brewery",
+      rating: 1,
+      imageId: "15",
+      description:
+        "The history of the brand of Viking beer can be traced back to 1939 when Efnagerd Siglufjardar was established in the town of Siglufjordur in Northern Iceland. In 1945, the brewery moved to Akureyri and the name was changed to Efnagerd Akureyrar. In 1962, a new factory was built at Furuvellir 18, where it is still located today. The brewery name was changed to Viking hf. in 1994. In early 2001, the brewery merged with Vífilfell hf. thus creating the largest company in Iceland in the beverage industry.",
+    },
+    {
+      id: 16,
+      key: "16",
+      name: "Tuborg",
+      state: "DK",
+      manufacturer: "Tuborg Brewery",
+      rating: 2,
+      imageId: "16",
+      description:
+        "Tuborg is a Danish brewing company founded in 1873 on a harbour in Hellerup, an area North of Copenhagen, Denmark . Since 1970 it has been part of the Carlsberg Group. The famous Tuborg pilsner was brewed for the first time in 1880.",
+    },
+    {
+      id: 17,
+      key: "17",
+      name: "Tyskie",
+      state: "PL",
+      manufacturer: "Tychy Brewery",
+      rating: 2,
+      imageId: "17",
+      description:
+        "Princely Brewery Tychy (Polish Tyskie Browary Książęce) or Tychy Brewery in the town of Tychy is one of the largest breweries in Poland. It is operated by the Kompania Piwowarska company. It traces its history to the 17th century. The brand of beer produced by the brewery is Tyskie.",
+    },
+    {
+      id: 18,
+      key: "18",
+      name: "Efes",
+      state: "TR",
+      manufacturer: "Anadolu Efes Biracılık",
+      rating: 2,
+      imageId: "18",
+      description:
+        "Anadolu Efes Biracılık ve Malt Sanayii A.Ş. produces and markets beer and malt and non-alcoholic beverages in a wide geographical area comprising Turkey, Russia, the Commonwealth of Independent States (CIS), Europe, Central Asia and the Middle East. Anadolu Efes is a member of the Anadolu Group. Anadolu Group was founded in the early 1950s by the Özilhan and Yazıcı families. Exhibiting a rapid and sustainable growth since its inception, the Anadolu Group transformed into a holding company in 1969.",
+    },
+    {
+      id: 19,
+      key: "19",
+      name: "Feldschlösschen",
+      state: "CH",
+      manufacturer: "Feldschlösschen Brewery",
+      rating: 4,
+      imageId: "19",
+      description:
+        "The latter is the biggest brewery in Switzerland and was founded in 1876. It bought out Cardinal in 1991. It was bought by Carlsberg in 2000.",
+    },
+  ],
+}

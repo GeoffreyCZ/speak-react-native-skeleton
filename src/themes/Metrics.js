@@ -4,10 +4,13 @@ export default {
   },
   texts: {
     title: {
-      size: 40
+      size: 25,
     },
     item: {
-      size: 20
+      size: 20,
+    },
+    description: {
+      size: 15,
     },
   },
 }

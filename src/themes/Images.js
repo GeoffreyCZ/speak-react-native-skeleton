@@ -18,4 +18,5 @@ export default {
   "17": require("../../assets/images/17.png"),
   "18": require("../../assets/images/18.png"),
   "19": require("../../assets/images/19.png"),
+  profilePhoto: require("../../assets/images/profilePhoto.jpeg"),
 }

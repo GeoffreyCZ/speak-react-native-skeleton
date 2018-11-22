@@ -1,9 +1,10 @@
 // @flow
 import React from "react"
+import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import { SafeAreaView, StyleSheet } from "react-native"
 
 // data
-import data from "../../assets/data/data"
+import data from "../../assets/data/breweries"
 
 // components
 import { BreweryList, Title } from "../components"
@@ -14,14 +15,17 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.background,
   },
+  icon: {
+    height: 24,
+    width: 24,
+  },
 })
 
-export default class RootContainer extends React.PureComponent<null> {
+export default class BreweriesListContainer extends React.PureComponent<null> {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Title>Brewerynator</Title>
-        <BreweryList data={data.breweries} />
+        <BreweryList data={data.breweries} navigation={this.props.navigation} />
       </SafeAreaView>
     )
   }
