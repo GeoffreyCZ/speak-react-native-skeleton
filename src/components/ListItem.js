@@ -7,7 +7,7 @@ import { Metrics } from "../themes"
 // theme
 const styles = {
   itemContainer: {
-    height: 50,
+    height: 65,
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
@@ -37,8 +37,7 @@ type Props = {|
   title: string,
   navigation: any,
   id: number,
-  +releaseDate: string,
-  +date: string,
+  releaseDate: string,
   posterPath: string,
 |}
 
@@ -47,7 +46,6 @@ const imageUrl = "http://image.tmdb.org/t/p/w300"
 export default class ListItem extends React.PureComponent<Props> {
   render() {
     const {
-      date,
       voteAverage,
       title,
       navigation,
@@ -75,9 +73,7 @@ export default class ListItem extends React.PureComponent<Props> {
             <Text numberOfLines={1} style={styles.titleContainer}>
               {title}
             </Text>
-            <Text style={styles.yearContainer}>
-              ({releaseDate === undefined ? date : releaseDate})
-            </Text>
+            <Text style={styles.yearContainer}>({releaseDate})</Text>
           </View>
           <Text style={styles.ratingContainer}>{voteAverage}</Text>
         </View>

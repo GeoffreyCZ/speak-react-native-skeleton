@@ -47,25 +47,28 @@ export default class TopRatedContainer extends React.PureComponent<null> {
   }
 
   onEndReached = () => {
-    const { page, loading } = this.state
+    const { loading } = this.state
     if (!loading) {
-      this.setState({ page: page + 1 }, () => {
-        this.makeRequest()
-      })
+      this.setState(
+        prevState => ({ page: prevState.page + 1 }),
+        () => {
+          this.makeRequest()
+        },
+      )
     }
   }
 
   makeRequest = () => {
-    const { page, movies } = this.state
+    const { page } = this.state
     this.setState({ loading: true }, () => {
       getTopRated(page).then(response => {
-        this.setState({
+        this.setState(prevState => ({
           movies:
             page === 1
               ? response.data.results
-              : [...movies, ...response.data.results],
+              : [...prevState.movies, ...response.data.results],
           loading: false,
-        })
+        }))
       })
     })
   }

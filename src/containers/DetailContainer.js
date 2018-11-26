@@ -31,7 +31,7 @@ export default class DetailContainer extends React.PureComponent<null> {
         title={movie.title}
         posterPath={movie.poster_path}
         overview={movie.overview}
-        releaseDate={movie.release_date}
+        releaseDate={movie.production_countries[0].iso_3166_1}
       />
     )
   }

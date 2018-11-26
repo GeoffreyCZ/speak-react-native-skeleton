@@ -96,7 +96,7 @@ export default class UpcomingContainer extends React.PureComponent<null> {
               voteAverage={item.vote_average}
               navigation={navigation}
               id={item.id}
-              releaseDate={item.release_date.slice(0, 4)}
+              releaseDate={item.release_date}
               posterPath={item.poster_path}
             />
           )}
