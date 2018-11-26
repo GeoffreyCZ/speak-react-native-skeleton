@@ -1,10 +1,18 @@
 // @flow
 import React from "react"
+import { ActivityIndicator, View, StyleSheet } from "react-native"
 
 import { Detail } from "../components"
 import { getDetail } from "../api"
 
-// components
+// theme
+const styles = StyleSheet.create({
+  loadingContainer: {
+    paddingVertical: 20,
+    borderTopWidth: 1,
+    borderColor: "#CED0CE",
+  },
+})
 
 export default class DetailContainer extends React.PureComponent<null> {
   static navigationOptions = {
@@ -12,7 +20,7 @@ export default class DetailContainer extends React.PureComponent<null> {
   }
 
   state = {
-    movie: [],
+    movie: null,
   }
 
   componentDidMount() {
@@ -26,13 +34,24 @@ export default class DetailContainer extends React.PureComponent<null> {
 
   render() {
     const { movie } = this.state
-    return (
-      <Detail
-        title={movie.title}
-        posterPath={movie.poster_path}
-        overview={movie.overview}
-        releaseDate={movie.production_countries[0].iso_3166_1}
-      />
-    )
+    let rVal = null
+    if (movie === null) {
+      rVal = (
+        <View style={styles.loadingContainer}>
+          <ActivityIndicator animating size="large" />
+        </View>
+      )
+    } else {
+      rVal = (
+        <Detail
+          title={movie.title}
+          posterPath={movie.poster_path}
+          overview={movie.overview}
+          releaseDate={movie.release_date}
+          countryCode={movie.production_countries[0].iso_3166_1}
+        />
+      )
+    }
+    return rVal
   }
 }

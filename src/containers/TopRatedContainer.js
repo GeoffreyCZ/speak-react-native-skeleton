@@ -103,9 +103,7 @@ export default class TopRatedContainer extends React.PureComponent<null> {
               posterPath={item.poster_path}
             />
           )}
-          keyExtractor={item => {
-            item.id.toString()
-          }}
+          keyExtractor={item => item.id.toString()}
           onEndReached={this.onEndReached}
           onEndReachedThreshold={0}
           ItemSeparatorComponent={this.renderSeparator}

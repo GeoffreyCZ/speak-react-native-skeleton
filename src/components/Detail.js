@@ -1,6 +1,7 @@
 // @flow
 import React from "react"
 import { Text, View, Image } from "react-native"
+import Flag from "react-native-flags"
 
 import { Metrics } from "../themes"
 
@@ -37,11 +38,12 @@ type Props = {|
   posterPath: string,
   overview: string,
   releaseDate: string,
+  countryCode: string,
 |}
 
 export default class Detail extends React.PureComponent<Props> {
   render() {
-    const { title, posterPath, overview, releaseDate } = this.props
+    const { title, posterPath, overview, releaseDate, countryCode } = this.props
     return (
       <View style={styles.detailContainer}>
         <Image
@@ -51,6 +53,7 @@ export default class Detail extends React.PureComponent<Props> {
           }}
         />
         <Text style={styles.titleContainer}>{title}</Text>
+        <Flag code={countryCode} size={32} />
         <Text style={styles.dateContainer}>{releaseDate}</Text>
         <Text style={styles.overviewContainer}>{overview}</Text>
       </View>

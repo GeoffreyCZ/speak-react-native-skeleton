@@ -1,6 +1,7 @@
 // @flow
 import React from "react"
 import { Text, View, TouchableHighlight, Image } from "react-native"
+import Icon from "react-native-vector-icons/FontAwesome"
 
 import { Metrics } from "../themes"
 
@@ -18,17 +19,25 @@ const styles = {
     width: Metrics.imageSmall.width,
     height: Metrics.imageSmall.height,
     borderRadius: 25,
+    marginRight: 5,
+  },
+  infoContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
   },
   titleContainer: {
     fontSize: 14,
-    flex: 1,
     width: 250,
-  },
-  yearContainer: {
-    fontSize: 10,
+    fontStyle: "italic",
   },
   ratingContainer: {
-    fontSize: 30,
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  iconContainer: {
+    color: "#d6d7da",
+    marginRight: 15,
   },
 }
 
@@ -63,19 +72,21 @@ export default class ListItem extends React.PureComponent<Props> {
         underlayColor="tomato"
       >
         <View style={styles.itemContainer}>
-          <Image
-            style={styles.image}
-            source={{
-              uri: `${imageUrl}${posterPath}`,
-            }}
-          />
-          <View>
-            <Text numberOfLines={1} style={styles.titleContainer}>
-              {title}
-            </Text>
-            <Text style={styles.yearContainer}>({releaseDate})</Text>
+          <View style={styles.infoContainer}>
+            <Image
+              style={styles.image}
+              source={{
+                uri: `${imageUrl}${posterPath}`,
+              }}
+            />
+            <View>
+              <Text numberOfLines={1} style={styles.titleContainer}>
+                {title} ({releaseDate})
+              </Text>
+              <Text style={styles.ratingContainer}>{voteAverage * 10}%</Text>
+            </View>
           </View>
-          <Text style={styles.ratingContainer}>{voteAverage}</Text>
+          <Icon name="chevron-right" size={15} style={styles.iconContainer} />
         </View>
       </TouchableHighlight>
     )

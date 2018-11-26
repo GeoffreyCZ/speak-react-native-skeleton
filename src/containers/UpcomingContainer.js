@@ -96,13 +96,11 @@ export default class UpcomingContainer extends React.PureComponent<null> {
               voteAverage={item.vote_average}
               navigation={navigation}
               id={item.id}
-              releaseDate={item.release_date}
+              releaseDate={item.release_date.slice(0, 4)}
               posterPath={item.poster_path}
             />
           )}
-          keyExtractor={item => {
-            item.id.toString()
-          }}
+          keyExtractor={item => item.id.toString()}
           onEndReached={this.onEndReached}
           onEndReachedThreshold={0}
           ItemSeparatorComponent={this.renderSeparator}
